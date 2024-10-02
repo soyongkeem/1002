@@ -90,7 +90,6 @@
             margin: 5px;
             transition: transform 0.3s, background-color 0.3s, opacity 0.5s ease-out;
             margin: 5px;
-    transition: transform 0.3s, background-color 0.3s, opacity 0.5s ease-out;
         }
 
         .pixel.active {
@@ -133,7 +132,6 @@
         left: 50%;
     }
 
-    /* 각각의 숫자가 상하좌우로 떠다니는 애니메이션 */
     @keyframes float1 {
         0% { transform: translate(0, 0); }
         25% { transform: translate(50px, -50px); }
@@ -207,12 +205,11 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: auto; /* 가로를 기준으로 높이를 자동으로 설정 */
+        height: auto;
     }
     </style>
 </head>
 <body>
-    <!-- Page1 -->
     <div id="page1" class="container">
         <h1>오감도는 세상을 진단하는 도구</h1>
         <p>이상, 1934.7.24. ~ 8.8. 연재</p>
@@ -228,17 +225,14 @@
         </p>
     </div>
 
-    <!-- Next Button -->
     <button class="next-button" id="nextButton">Next</button>
 
-    <!-- Page2 -->
     <div id="page2" class="container">
         <div class="canvas"></div>
         <p id="movingText" style="position: fixed; bottom: 80px; color: white; font-size: 16px;">마우스 커서로 자유롭게 오감도를 그리세요</p>
         <button class="next-button" id="nextButtonPage2">Next</button>
     </div>
 
-    <!-- Page3 -->
     <div id="page3" class="container">
         <div class="canvas"></div>
         
@@ -255,7 +249,6 @@
             <span class="floating-number" style="animation: float10 5s infinite;">9</span>
         </div>
         
-        <!-- 하단에 꽉 찬 이미지 추가 -->
         <img src="img.png" alt="하단 이미지" class="full-width-image">
         
         <button class="next-button" id="goToFirstButton">Go to First</button>
@@ -270,26 +263,22 @@
             const nextButtonPage2 = document.getElementById('nextButtonPage2');
             const goToFirstButton = document.getElementById('goToFirstButton');
 
-            // 첫 페이지에서 두 번째 페이지로 이동
             nextButton.addEventListener('click', () => {
                 page1.style.display = 'none';
                 page2.style.display = 'block';
             });
 
-            // 두 번째 페이지에서 세 번째 페이지로 이동
             nextButtonPage2.addEventListener('click', () => {
                 page2.style.display = 'none';
                 page3.style.display = 'block';
                 createPixelsForPage3();
             });
 
-            // 세 번째 페이지에서 첫 번째 페이지로 이동
             goToFirstButton.addEventListener('click', () => {
                 page3.style.display = 'none';
                 page1.style.display = 'block';
             });
 
-            // Page2의 픽셀 아트 관련 코드
             const canvasPage2 = document.querySelector('#page2 .canvas');
             const canvasPage3 = document.querySelector('#page3 .canvas');
             const basePixelHeight = 50;
@@ -358,93 +347,24 @@
 
             const createPixelsForPage3 = () => {
                 createPixels(canvasPage3);
- // Page3의 픽셀 아트 관련 코드에서 텍스트를 제거
-canvasPage3.addEventListener('mousemove', (e) => {
-    const x = Math.floor(e.pageX / basePixelHeight);
-    const y = Math.floor(e.pageY / basePixelHeight);
-    const index = y * Math.floor(window.innerWidth / basePixelHeight) + x;
-    const pixels = canvasPage3.querySelectorAll('.pixel');
 
-    if (pixels[index]) {
-        // const word = koreanWords[Math.floor(Math.random() * koreanWords.length)]; // 주석 처리 또는 삭제
-        // const wordLength = word.length; // 주석 처리 또는 삭제
-        pixels[index].classList.add('active');
-        pixels[index].style.backgroundColor = getNeonColor();
-        pixels[index].style.width = '24px'; // 원래 픽셀 크기로 유지
-        pixels[index].innerText = ''; // 이 부분에서 텍스트를 제거
-    }
-  canvasPage3.addEventListener('mousemove', (e) => {
-    const x = Math.floor(e.pageX / basePixelHeight);
-    const y = Math.floor(e.pageY / basePixelHeight);
-    const index = y * Math.floor(window.innerWidth / basePixelHeight) + x;
-    const pixels = canvasPage3.querySelectorAll('.pixel');
+                canvasPage3.addEventListener('mousemove', (e) => {
+                    const x = Math.floor(e.pageX / basePixelHeight);
+                    const y = Math.floor(e.pageY / basePixelHeight);
+                    const index = y * Math.floor(window.innerWidth / basePixelHeight) + x;
+                    const pixels = canvasPage3.querySelectorAll('.pixel');
 
-    if (pixels[index]) {
-        // const word = koreanWords[Math.floor(Math.random() * koreanWords.length)]; // 주석 처리 또는 삭제
-        // const wordLength = word.length; // 주석 처리 또는 삭제
-        pixels[index].classList.add('active');
-        pixels[index].style.backgroundColor = getNeonColor();
-        pixels[index].style.width = '24px'; // 원래 픽셀 크기로 유지
-        pixels[index].innerText = ''; // 이 부분에서 텍스트를 제거
-    }
-});  
-});
-
-        canvasPage3.addEventListener('mousemove', (e) => {
-            const x = Math.floor(e.pageX / basePixelHeight);
-            const y = Math.floor(e.pageY / basePixelHeight);
-            const index = y * Math.floor(window.innerWidth / basePixelHeight) + x;
-            const pixels = canvasPage3.querySelectorAll('.pixel');
-
-            if (pixels[index]) {
-                // const word = koreanWords[Math.floor(Math.random() * koreanWords.length)]; // 주석 처리 또는 삭제
-                // const wordLength = word.length; // 주석 처리 또는 삭제
-                pixels[index].classList.add('active');
-                pixels[index].style.backgroundColor = getNeonColor();
-                pixels[index].style.width = '24px'; // 원래 픽셀 크기로 유지
-                pixels[index].innerText = ''; // 이 부분에서 텍스트를 제거
+                    if (pixels[index]) {
+                        pixels[index].classList.add('active');
+                        pixels[index].style.backgroundColor = getNeonColor();
+                        pixels[index].style.width = '24px';
+                        pixels[index].innerText = '';
                     }
                 });
             };
 
             createPixels(canvasPage2);
         });
-
-        const createPixelsForPage3 = () => {
-    createPixels(canvasPage3);
-
-    canvasPage3.addEventListener('mousemove', (e) => {
-        const x = Math.floor(e.pageX / basePixelHeight);
-        const y = Math.floor(e.pageY / basePixelHeight);
-        const index = y * Math.floor(window.innerWidth / basePixelHeight) + x;
-        const pixels = canvasPage3.querySelectorAll('.pixel');
-
-        if (pixels[index]) {
-            pixels[index].classList.add('active');
-            pixels[index].style.backgroundColor = getNeonColor();
-            pixels[index].style.width = '24px'; // 원래 크기로 유지
-            pixels[index].innerText = ''; // 텍스트 제거
-        }
-        
-    });
-};
-
-// 픽셀 생성 시 속도 조정
-const createPixels = (canvasElement) => {
-    const numberOfPixels = Math.floor(window.innerWidth / basePixelHeight) * Math.floor(window.innerHeight / basePixelHeight);
-    for (let i = 0; i < numberOfPixels; i++) {
-        const pixel = document.createElement('div');
-        pixel.classList.add('pixel');
-        canvasElement.appendChild(pixel);
-
-        // 픽셀 채워지는 속도 조정 (더 빠르게)
-        setTimeout(() => {
-            pixel.style.opacity = '1';
-        }, i * 5); // 딜레이 시간을 10ms에서 5ms로 줄여 속도를 빠르게 설정
-    }
-};
     </script>   
-</body>
-</html>
 </body>
 </html>
