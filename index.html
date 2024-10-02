@@ -89,8 +89,6 @@
             border: 1px solid white;
             margin: 5px;
             transition: transform 0.3s, background-color 0.3s, opacity 0.5s ease-out;
-            margin: 5px;
-    transition: transform 0.3s, background-color 0.3s, opacity 0.5s ease-out;
         }
 
         .pixel.active {
@@ -120,108 +118,109 @@
             animation: moveText 3s infinite;
         }
         
-    .highlight {
-        font-weight: bold;
-        color: #f6ff00;
-    }
+        .highlight {
+            font-weight: bold;
+            color: #f6ff00;
+        }
     
-    .floating-number {
-        position: absolute;
-        font-size: 24px;
-        color: white;
-        top: 50%;
-        left: 50%;
-    }
+        .floating-number {
+            position: absolute;
+            font-size: 24px;
+            color: white;
+            top: 50%;
+            left: 50%;
+        }
 
-    /* 각각의 숫자가 상하좌우로 떠다니는 애니메이션 */
-    @keyframes float1 {
-        0% { transform: translate(0, 0); }
-        25% { transform: translate(50px, -50px); }
-        50% { transform: translate(100px, 50px); }
-        75% { transform: translate(-50px, 100px); }
-        100% { transform: translate(0, 0); }
-    }
-    @keyframes float2 {
-        0% { transform: translate(0, 0); }
-        25% { transform: translate(-60px, 60px); }
-        50% { transform: translate(60px, -30px); }
-        75% { transform: translate(-30px, -90px); }
-        100% { transform: translate(0, 0); }
-    }
-    @keyframes float3 {
-        0% { transform: translate(0, 0); }
-        25% { transform: translate(40px, 40px); }
-        50% { transform: translate(-40px, -40px); }
-        75% { transform: translate(70px, -70px); }
-        100% { transform: translate(0, 0); }
-    }
-    @keyframes float4 {
-        0% { transform: translate(0, 0); }
-        25% { transform: translate(-50px, 30px); }
-        50% { transform: translate(50px, -50px); }
-        75% { transform: translate(30px, 50px); }
-        100% { transform: translate(0, 0); }
-    }
+        /* 각각의 숫자가 상하좌우로 떠다니는 애니메이션 */
+        @keyframes float1 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(50px, -50px); }
+            50% { transform: translate(100px, 50px); }
+            75% { transform: translate(-50px, 100px); }
+            100% { transform: translate(0, 0); }
+        }
+        @keyframes float2 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-60px, 60px); }
+            50% { transform: translate(60px, -30px); }
+            75% { transform: translate(-30px, -90px); }
+            100% { transform: translate(0, 0); }
+        }
+        @keyframes float3 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(40px, 40px); }
+            50% { transform: translate(-40px, -40px); }
+            75% { transform: translate(70px, -70px); }
+            100% { transform: translate(0, 0); }
+        }
+        @keyframes float4 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-50px, 30px); }
+            50% { transform: translate(50px, -50px); }
+            75% { transform: translate(30px, 50px); }
+            100% { transform: translate(0, 0); }
+        }
 
-    @keyframes float5 {
-        0% { transform: translate(0, 0); }
-        25% { transform: translate(30px, -40px); }
-        50% { transform: translate(-30px, 40px); }
-        75% { transform: translate(40px, -30px); }
-        100% { transform: translate(0, 0); }
-    }
+        @keyframes float5 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(30px, -40px); }
+            50% { transform: translate(-30px, 40px); }
+            75% { transform: translate(40px, -30px); }
+            100% { transform: translate(0, 0); }
+        }
 
-    @keyframes float6 {
-        0% { transform: translate(0, 0); }
-        25% { transform: translate(80px, 20px); }
-        50% { transform: translate(-80px, -40px); }
-        75% { transform: translate(40px, 60px); }
-        100% { transform: translate(0, 0); }
-    }
+        @keyframes float6 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(80px, 20px); }
+            50% { transform: translate(-80px, -40px); }
+            75% { transform: translate(40px, 60px); }
+            100% { transform: translate(0, 0); }
+        }
 
-    @keyframes float7 {
-        0% { transform: translate(0, 0); }
-        25% { transform: translate(-100px, 30px); }
-        50% { transform: translate(100px, -70px); }
-        75% { transform: translate(-70px, 100px); }
-        100% { transform: translate(0, 0); }
-    }
+        @keyframes float7 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-100px, 30px); }
+            50% { transform: translate(100px, -70px); }
+            75% { transform: translate(-70px, 100px); }
+            100% { transform: translate(0, 0); }
+        }
 
-    @keyframes float8 {
-        0% { transform: translate(0, 0); }
-        25% { transform: translate(20px, -60px); }
-        50% { transform: translate(-20px, 60px); }
-        75% { transform: translate(60px, 40px); }
-        100% { transform: translate(0, 0); }
-    }
+        @keyframes float8 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(20px, -60px); }
+            50% { transform: translate(-20px, 60px); }
+            75% { transform: translate(60px, 40px); }
+            100% { transform: translate(0, 0); }
+        }
 
-    @keyframes float9 {
-        0% { transform: translate(0, 0); }
-        25% { transform: translate(-40px, 50px); }
-        50% { transform: translate(40px, -50px); }
-        75% { transform: translate(-50px, 30px); }
-        100% { transform: translate(0, 0); }
-    }
-    .full-width-image {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: auto; /* 가로를 기준으로 높이를 자동으로 설정 */
-    }
+        @keyframes float9 {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-40px, 50px); }
+            50% { transform: translate(40px, -50px); }
+            75% { transform: translate(-50px, 30px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .full-width-image {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <!-- Page1 -->
     <div id="page1" class="container">
         <h1>오감도는 세상을 진단하는 도구</h1>
-        <p>이상, 1934.7.24. ~ 8.8. 연재</p>
+        <p><오감도>, 이상, <조선중앙일보> 연재, 1934.7.24. ~ 8.8</p>
         <video controls autoplay muted>
             <source src="mov1.mp4" type="video/mp4">
         </video>
         
         <p> <span class="highlight">2024년 9월</span>, GIST 연구팀은 그의 시 "오감도"에 물리학을 접목시켜 새로운 해석법을 제시합니다. <br>
-            숫자판을 원기둥으로 변환하고 도넛 형태로 읽었을 때 정상적인 수열로 해석됩나다. <br>
+            숫자판을 원기둥으로 변환하고 도넛 형태로 읽었을 때 정상적인 수열로 해석됩니다. <br>
             도넛 내부는 우리가 사는 세상이고, 표면을 지나는 무수히 많은 선은 내부의 상태를 진단할 수 있는 도구라는 것입니다.<br>
             <br>
             버튼을 눌러 오감도를 그려보세요.
@@ -252,14 +251,14 @@
             <span class="floating-number" style="animation: float7 5s infinite;">6</span>
             <span class="floating-number" style="animation: float8 6s infinite;">7</span>
             <span class="floating-number" style="animation: float9 7s infinite;">8</span>
-            <span class="floating-number" style="animation: float10 5s infinite;">9</span>
+            <span class="floating-number" style="animation: float1 5s infinite;">9</span>
         </div>
         
         <!-- 하단에 꽉 찬 이미지 추가 -->
         <img src="img.png" alt="하단 이미지" class="full-width-image">
         
         <button class="next-button" id="goToFirstButton">Go to First</button>
-        <div class="canvas"></div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -293,35 +292,6 @@
             const canvasPage2 = document.querySelector('#page2 .canvas');
             const canvasPage3 = document.querySelector('#page3 .canvas');
             const basePixelHeight = 50;
-            const koreanWords = 
-            ['13인의', '아해가', '도로로', '질주하오.', 
-            '(길은', '막다른', '골목이', '적당하오.)', 
-            '제1의', '아해가', '무섭다고', '그리오.', 
-            '제2의', '아해도', '무섭다고', '그리오.', 
-            '제3의', '아해도', '무섭다고', '그리오.', 
-            '제4의', '아해도', '무섭다고', '그리오.', 
-            '제5의', '아해도', '무섭다고', '그리오.', 
-            '제6의', '아해도', '무섭다고', '그리오.', 
-            '제7의', '아해도', '무섭다고', '그리오.', 
-            '제8의', '아해도', '무섭다고', '그리오.', 
-            '제9의', '아해도', '무섭다고', '그리오.', 
-            '제10의', '아해도', '무섭다고', '그리오.', 
-            '제11의', '아해가', '무섭다고', '그리오.', 
-            '제12의', '아해도', '무섭다고', '그리오.', 
-            '제13의', '아해도', '무섭다고', '그리오.', 
-            '13인의', '아해는', '무서운', '아해와', 
-            '무서워하는', '아해와', '그렇게뿐이', '모였소.', 
-            '(다른', '사정은', '없는', '것이', 
-            '차라리', '나았소)', '그중에', '1인의', 
-            '아해가', '무서운', '아해라도', '좋소.', 
-            '그중에', '2인의', '아해가', '무서운', 
-            '아해라도', '좋소.', '그중에', '2인의', 
-            '아해가', '무서워하는', '아해라도', '좋소.', 
-            '그중에', '1인의', '아해가', '무서워하는', 
-            '아해라도', '좋소.', '(길은', '뚫린', 
-            '골목이라도', '적당하오.)', '13인의', '아해가', 
-            '도로로', '질주하지', '아니하여도', '좋소.'];
-            let currentWordIndex = 0;
 
             const getNeonColor = () => {
                 const neonColors = ['#ffffff', '#ff0000', '#0000ff', '#a9a9a9', '#f6ff00'];
@@ -347,104 +317,33 @@
                 const pixels = canvasPage2.querySelectorAll('.pixel');
 
                 if (pixels[index]) {
-                    const word = koreanWords[Math.floor(Math.random() * koreanWords.length)];
-                    const wordLength = word.length;
                     pixels[index].classList.add('active');
                     pixels[index].style.backgroundColor = getNeonColor();
-                    pixels[index].style.width = `${wordLength * 20}px`;
-                    pixels[index].innerText = word;
+                    pixels[index].style.width = '24px';
+                    pixels[index].innerText = '';
                 }
             });
 
             const createPixelsForPage3 = () => {
                 createPixels(canvasPage3);
- // Page3의 픽셀 아트 관련 코드에서 텍스트를 제거
-canvasPage3.addEventListener('mousemove', (e) => {
-    const x = Math.floor(e.pageX / basePixelHeight);
-    const y = Math.floor(e.pageY / basePixelHeight);
-    const index = y * Math.floor(window.innerWidth / basePixelHeight) + x;
-    const pixels = canvasPage3.querySelectorAll('.pixel');
 
-    if (pixels[index]) {
-        // const word = koreanWords[Math.floor(Math.random() * koreanWords.length)]; // 주석 처리 또는 삭제
-        // const wordLength = word.length; // 주석 처리 또는 삭제
-        pixels[index].classList.add('active');
-        pixels[index].style.backgroundColor = getNeonColor();
-        pixels[index].style.width = '24px'; // 원래 픽셀 크기로 유지
-        pixels[index].innerText = ''; // 이 부분에서 텍스트를 제거
-    }
-  canvasPage3.addEventListener('mousemove', (e) => {
-    const x = Math.floor(e.pageX / basePixelHeight);
-    const y = Math.floor(e.pageY / basePixelHeight);
-    const index = y * Math.floor(window.innerWidth / basePixelHeight) + x;
-    const pixels = canvasPage3.querySelectorAll('.pixel');
+                canvasPage3.addEventListener('mousemove', (e) => {
+                    const x = Math.floor(e.pageX / basePixelHeight);
+                    const y = Math.floor(e.pageY / basePixelHeight);
+                    const index = y * Math.floor(window.innerWidth / basePixelHeight) + x;
+                    const pixels = canvasPage3.querySelectorAll('.pixel');
 
-    if (pixels[index]) {
-        // const word = koreanWords[Math.floor(Math.random() * koreanWords.length)]; // 주석 처리 또는 삭제
-        // const wordLength = word.length; // 주석 처리 또는 삭제
-        pixels[index].classList.add('active');
-        pixels[index].style.backgroundColor = getNeonColor();
-        pixels[index].style.width = '24px'; // 원래 픽셀 크기로 유지
-        pixels[index].innerText = ''; // 이 부분에서 텍스트를 제거
-    }
-});  
-});
-
-        canvasPage3.addEventListener('mousemove', (e) => {
-            const x = Math.floor(e.pageX / basePixelHeight);
-            const y = Math.floor(e.pageY / basePixelHeight);
-            const index = y * Math.floor(window.innerWidth / basePixelHeight) + x;
-            const pixels = canvasPage3.querySelectorAll('.pixel');
-
-            if (pixels[index]) {
-                // const word = koreanWords[Math.floor(Math.random() * koreanWords.length)]; // 주석 처리 또는 삭제
-                // const wordLength = word.length; // 주석 처리 또는 삭제
-                pixels[index].classList.add('active');
-                pixels[index].style.backgroundColor = getNeonColor();
-                pixels[index].style.width = '24px'; // 원래 픽셀 크기로 유지
-                pixels[index].innerText = ''; // 이 부분에서 텍스트를 제거
+                    if (pixels[index]) {
+                        pixels[index].classList.add('active');
+                        pixels[index].style.backgroundColor = getNeonColor();
+                        pixels[index].style.width = '24px';
+                        pixels[index].innerText = '';
                     }
                 });
             };
 
             createPixels(canvasPage2);
         });
-
-        const createPixelsForPage3 = () => {
-    createPixels(canvasPage3);
-
-    canvasPage3.addEventListener('mousemove', (e) => {
-        const x = Math.floor(e.pageX / basePixelHeight);
-        const y = Math.floor(e.pageY / basePixelHeight);
-        const index = y * Math.floor(window.innerWidth / basePixelHeight) + x;
-        const pixels = canvasPage3.querySelectorAll('.pixel');
-
-        if (pixels[index]) {
-            pixels[index].classList.add('active');
-            pixels[index].style.backgroundColor = getNeonColor();
-            pixels[index].style.width = '24px'; // 원래 크기로 유지
-            pixels[index].innerText = ''; // 텍스트 제거
-        }
-        
-    });
-};
-
-// 픽셀 생성 시 속도 조정
-const createPixels = (canvasElement) => {
-    const numberOfPixels = Math.floor(window.innerWidth / basePixelHeight) * Math.floor(window.innerHeight / basePixelHeight);
-    for (let i = 0; i < numberOfPixels; i++) {
-        const pixel = document.createElement('div');
-        pixel.classList.add('pixel');
-        canvasElement.appendChild(pixel);
-
-        // 픽셀 채워지는 속도 조정 (더 빠르게)
-        setTimeout(() => {
-            pixel.style.opacity = '1';
-        }, i * 5); // 딜레이 시간을 10ms에서 5ms로 줄여 속도를 빠르게 설정
-    }
-};
     </script>   
-</body>
-</html>
 </body>
 </html>
